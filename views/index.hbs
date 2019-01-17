@@ -34,14 +34,19 @@ body {
 
 }
 
-.one {
+.header {
   grid-column: 1/3;
   height: 100px;
   font-family: {{font-family}};
+  text-align: center;
 }
 
-.two {
+.menu {
   height: 80vh;
+}
+
+.desc{
+
 }
 
 .items{
@@ -68,6 +73,7 @@ body {
   .one {
     grid-column: 1/1;
     height: 50px;
+
   }
   
   .two {
@@ -80,10 +86,10 @@ body {
     </style>
 
 <div id="wrapper">
-  <div class="container one">
+  <div class="container header">
     {{> header}}
   </div>
-  <div class="container two">
+  <div class="container menu">
     {{> menu}}
     {{!-- Side menu
     <ul class="items">
@@ -94,8 +100,8 @@ body {
   </ul> --}}
 
   </div>
-  <div class="container three">
-    Description
+  <div class="container desc">
+    {{> description}}
   </div>
 </div>
   
