@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Font Style Fun</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css?family=Coiny|Open+Sans" rel="stylesheet">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family:"{{p-font-family}}";
+}
+
+/* Style the header */
+header {
+  background-color:"{{background-color}}";
+  font-size: "{{h1-font-size}}"
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+  color: white;
+}
+h1 {
+  font-color: "{{h1-font-color}}";
+  font-size:"{{h1-font-size}}";
+}
+/* Create two columns/boxes that floats next to each other */
+nav {
+  float: left;
+  width: 30%;
+  height: 300px; 
+  background:grey;
+  padding: 20px;
+}
+
+/* Style the list inside the menu */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+article {
+  float: left;
+  padding: 20px;
+  width: 70%;
+  height: 300px; 
+}
+h1{
+  "color": "{{h1-font-color}}";
+  "font-size": "{{h1-font-size}}"
+}
+/* Clear floats after the columns */
+section:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+@media (max-width: 600px) {
+  nav, article {
+    width: 100%;
+    height: auto;
+  }
+}
+</style>
+</head>
+<body style='background-color:{{background-color}}'>
+
+{{> header}}
+
+{{!-- <section>
+  {{> message}}
+</section> --}}
+
+<section id ="menu">
+  {{> menu}}
+  <article id="display">
+    <h1 style='color: {{h1-font-color}};font-size:{{h1-font-size}}'>This is H1 Font Style</h1>
+    <p style='color: {{p-font-color}};font-size:{{p-font-size}}'>This is paragraph style</p>
+</section>
+
+<footer id ="footer">
+  {{> footer}}
+</footer>
+  
+</body>
+</html>
