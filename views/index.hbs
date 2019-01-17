@@ -1,91 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Font Style Fun</title>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link href="https://fonts.googleapis.com/css?family=Coiny|Open+Sans" rel="stylesheet">
-<style>
-* {
-  box-sizing: border-box;
-}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style.css">
+  <link href= {{font-URL}}
+  rel="stylesheet"> 
+  <title>Document</title>
+</head>
+<body>
 
-body {
-  font-family:"{{p-font-family}}";
-}
-
-/* Style the header */
-header {
-  background-color:"{{background-color}}";
-  font-size: "{{h1-font-size}}"
-  padding: 30px;
-  text-align: center;
-  font-size: 35px;
-  color: white;
-}
-h1 {
-  font-color: "{{h1-font-color}}";
-  font-size:"{{h1-font-size}}";
-}
-/* Create two columns/boxes that floats next to each other */
-nav {
-  float: left;
-  width: 30%;
-  height: 300px; 
-  background:grey;
-  padding: 20px;
-}
-
-/* Style the list inside the menu */
-nav ul {
-  list-style-type: none;
+  <style>
+    * {
+  margin: 0;
   padding: 0;
 }
 
-article {
-  float: left;
-  padding: 20px;
-  width: 70%;
-  height: 300px; 
-}
-h1{
-  "color": "{{h1-font-color}}";
-  "font-size": "{{h1-font-size}}"
-}
-/* Clear floats after the columns */
-section:after {
-  content: "";
-  display: table;
-  clear: both;
+body {
+  background-color: {{background-color}};
 }
 
-/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
-@media (max-width: 600px) {
-  nav, article {
-    width: 100%;
-    height: auto;
+#wrapper{
+  display: grid;
+  grid-template-columns: .5fr 2fr;
+}
+
+.container{
+  margin: 10px;
+  padding: 10px;
+  background-color: white;
+  border: solid 1px black;
+
+}
+
+.one {
+  grid-column: 1/3;
+  height: 100px;
+  font-family: {{font-family}};
+}
+
+.two {
+  height: 80vh;
+}
+
+.items{
+  padding: 20px;
+  display: grid;
+  grid-template-columns: auto;
+  grid-gap: 10px;
+  list-style-type: none;
+}
+.items li{
+  border: solid 1px black;
+  margin: 5px;
+  padding: 20px;
+}
+
+@media only screen and (max-width: 600px) {
+
+  #wrapper{
+    display: grid;
+    grid-template-rows: auto auto auto;
+    grid-template-columns: auto;
+  }
+
+  .one {
+    grid-column: 1/1;
+    height: 50px;
+  }
+  
+  .two {
+    height: 100px;
+  }
+  .three {
+    height: 400px;
   }
 }
-</style>
-</head>
-<body style='background-color:{{background-color}}'>
+    </style>
 
-{{> header}}
+<div id="wrapper">
+  <div class="container one">
+    {{> header}}
+  </div>
+  <div class="container two">
+    {{> menu}}
+    {{!-- Side menu
+    <ul class="items">
+    <li>Style One</li>
+    <li>Style Two</li>
+    <li>Style Three</li>
+    <li>Style Four</li>
+  </ul> --}}
 
-{{!-- <section>
-  {{> message}}
-</section> --}}
-
-<section id ="menu">
-  {{> menu}}
-  <article id="display">
-    <h1 style='color: {{h1-font-color}};font-size:{{h1-font-size}}'>This is H1 Font Style</h1>
-    <p style='color: {{p-font-color}};font-size:{{p-font-size}}'>This is paragraph style</p>
-</section>
-
-<footer id ="footer">
-  {{> footer}}
-</footer>
+  </div>
+  <div class="container three">
+    Description
+  </div>
+</div>
   
 </body>
 </html>
