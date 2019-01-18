@@ -1,12 +1,12 @@
-
-        {
-          "id":"1950",
-          "background-color":"red",
-          "h1-font-color":"#E2DED3",
-          "font-family":"Coiny, cursive",
-          "font-URL":"https://fonts.googleapis.com/css?family=Coiny",
-          "h1-font-size":"20px",
-          "p-font-color": "#FDE8CB",
-          "p-font-size":"12px"
-      }
-  
+{
+  "id":"3000s",
+  "background-color":"black",
+  "h1-font-color":"#78D8FF",
+  "h1-font-family":"Audiowide",
+  "h1-font-size":"54px",
+  "p-font-color":"#BCBCBC",
+  "p-font-family":"monospace",
+  "p-font-size":"16px",
+  "button-color":"#A0DBDB",
+  "button-text":"black"
+}

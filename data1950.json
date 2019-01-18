@@ -1,12 +1,12 @@
-
-        {
-            "id":"1950",
-            "background-color":"#FF9797",
-            "h1-font-color":"#E2DED3",
-            "font-family":"Coiny, cursive",
-            "font-URL":"https://fonts.googleapis.com/css?family=Coiny",
-            "h1-font-size":"20px",
-            "p-font-color": "#FDE8CB",
-            "p-font-size":"12px"
-        }
-    
+{
+"id":"1950",
+"background-color":"#4E413B",
+"h1-font-color":"#FDE8CB",
+"h1-font-family":"Abril Fatface",
+"h1-font-size":"54px",
+"p-font-color": "#E2DED3",
+"p-font-family":"Coiny",      
+"p-font-size":"14px",
+"button-color":"#FF6024",
+"button-text":"#FDE8CB"
+}
