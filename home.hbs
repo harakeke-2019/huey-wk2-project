@@ -9,17 +9,31 @@
   <style>
       
       body {
+        background-color: bisque;
         font-color:"Green";
       }
 
       h1 {
-        font-family: "Abril Fatface";
+        display: inline-block;
+        font-family:Arial, Helvetica, sans-serif;
         font-color: "{{h1-font-color}}";
-        font-size:"{{h1-font-size}}";
+        font-size: 50px;
+      }
+
+      button{
+        margin-top: 50px;
+        text-align: center;
+        font-size: 30px;
+        width: 200px;
+        background-color:aqua;
+        padding: 20 20 120 20;
+        border-radius: 25%;
       }
               
-      #layout {     
-          display:table-row;    
+      #layout {  
+        margin-top: 350px;
+        width: 100%; 
+        text-align: center; 
       }            
       #content {     
           display:table-cell;   
@@ -28,19 +42,22 @@
       word-wrap:break-word; 
       }      
       #center {
-          height: 170px;
-          width: 270px;
-          font-size: 48px;
-          text-align: center;
+         width:500px;
+          margin: 0 auto;
           vertical-align: middle;
+          text-align: center;
         }   
   </style>
 </head>
 <body>
     <div id = "layout">
-      <h1><div id = "center">Welcome to the Stylizer</div></h1>
+      <h1>Welcome to the Stylizer</h1>
+  <a href="/styles/blank">
+    <div id = "button">
+      <button type="Enter" >Enter</button>
     </div>
-    
-  <div><button type="Enter">Enter</button></div>
+  </a>
+
+   </div>
 </body>
 </html>
