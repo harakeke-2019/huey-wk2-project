@@ -20,6 +20,8 @@ router.get('/styles', (req, res) =>{
    })
   })
 
+  
+
 router.get('/styles/1950', (req, res) => {
    const filepath = path.join(__dirname, './data1950.json')
    fs. readFile(filepath, (err, contents) =>{
@@ -50,4 +52,14 @@ router.get('/styles/3000', (req, res) => {
    })
 })
 
+router.get('/styles/blank', (req, res) =>{
+   const filepath = path.join(__dirname, './datablank.json')
+   fs. readFile(filepath, (err, contents) =>{
+      if (err) res.status(500).send('file access error')
+      const contentsObj = JSON.parse(contents)
+      res.render('index', contentsObj)
+      console.log(contentsObj)
+   })
+  })
+  
 module.exports = router
