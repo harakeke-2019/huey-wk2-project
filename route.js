@@ -51,6 +51,16 @@ router.get('/styles/3000', (req, res) => {
    })
 })
 
+
+router.get('/styles/3000', (req, res) => {
+   const filepath = path.join(__dirname, './data3000.json')
+   fs. readFile(filepath, (err, contents) =>{
+      if (err) res.status(500).send('file access error')
+      const contentsObj = JSON.parse(contents)
+      res.render('index', contentsObj)
+      console.log(contentsObj)
+   })
+})
 // router.post('/styles/:id', (req, res) => {
 //    let filepath =""
 //    const id = Number(req.params.id)
