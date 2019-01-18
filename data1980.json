@@ -1,12 +1,12 @@
-
-        {
-          "id":"1980",
-          "background-color":"blue",
-          "h1-font-color":"#E2DED3",
-          "font-family":"Coiny, cursive",
-          "font-URL":"https://fonts.googleapis.com/css?family=Coiny",
-          "h1-font-size":"20px",
-          "p-font-color": "#FDE8CB",
-          "p-font-size":"12px"
-      }
-  
+{
+  "id":"1980s",
+  "background-color":"#FF9797",
+  "h1-font-color":"#9A2C80",
+  "h1-font-family":"Atomic Age",
+  "h1-font-size":"54px",
+  "p-font-color":"#B72A67",
+  "p-font-font-family":"Arial",
+  "p-font-size":"20px",
+  "button-color":"#FEC7B6",
+  "button-text":"#B72A67"
+  }

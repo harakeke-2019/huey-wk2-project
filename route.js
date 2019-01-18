@@ -11,17 +11,16 @@ router.get('/', (req, res) =>{
 })
 
 router.get('/styles', (req, res) =>{
-   const filepath = path.join(__dirname, './data1950.json')
+   const filepath = path.join(__dirname, './datahome.json')
    fs. readFile(filepath, (err, contents) =>{
       if (err) res.status(500).send('file access error')
       const contentsObj = JSON.parse(contents)
-      res.render('index', contentsObj)
+      res.render('home', contentsObj)
       console.log(contentsObj)
    })
   })
 
   
-
 router.get('/styles/1950', (req, res) => {
    const filepath = path.join(__dirname, './data1950.json')
    fs. readFile(filepath, (err, contents) =>{
