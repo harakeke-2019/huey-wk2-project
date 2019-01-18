@@ -52,7 +52,6 @@ router.get('/styles/3000', (req, res) => {
    })
 })
 
-<<<<<<< HEAD
 // router.post('/styles/:id', (req, res) => {
 //    let filepath =""
 //    const id = Number(req.params.id)
@@ -75,7 +74,6 @@ router.get('/styles/3000', (req, res) => {
 //    })
 
 // })   
-=======
 router.get('/styles/blank', (req, res) =>{
    const filepath = path.join(__dirname, './datablank.json')
    fs. readFile(filepath, (err, contents) =>{
@@ -86,5 +84,4 @@ router.get('/styles/blank', (req, res) =>{
    })
   })
   
->>>>>>> ab50bf890a9a016aec211023b77ed98b50107fb0
 module.exports = router
