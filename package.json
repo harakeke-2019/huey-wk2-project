@@ -2,7 +2,7 @@
   "name": "TeamHuey",
   "version": "1.0.0",
   "main": "index.js",
-  "repository": "https://github.com/micah-peautagi/TeamHuey.git",
+  "repository": "https://github.com/harakeke-2019/huey-wk2-project",
   "license": "MIT",
   "devDependencies": {
     "jest": "^23.6.0",
@@ -16,6 +16,6 @@
   },
   "scripts": {
     "start": "node index",
-    "debug": "nodemon index"
+    "debug": "node index"
   }
 }
