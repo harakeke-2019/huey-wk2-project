@@ -62,6 +62,19 @@ body {
   padding: 20px;
 }
 
+input[type=text], select {
+  width: 100%;
+  font-size: 24px;
+  color: red;
+  font-family: {{font-family}};
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
 @media only screen and (max-width: 600px) {
 
   #wrapper{
@@ -70,16 +83,16 @@ body {
     grid-template-columns: auto;
   }
 
-  .one {
+  .header {
     grid-column: 1/1;
     height: 50px;
 
   }
   
-  .two {
+  .menu {
     height: 100px;
   }
-  .three {
+  .desc {
     height: 400px;
   }
 }
@@ -100,8 +113,10 @@ body {
   </ul> --}}
 
   </div>
+
   <div class="container desc">
     {{> description}}
+    {{message}}
   </div>
 </div>
   
